@@ -1,0 +1,93 @@
+.work-process-section {
+    .wrapper {
+        text-align: center;
+        padding: 82px 0 55px;
+
+        h2 {
+            color: $emperor;
+            @include font-parametars (30px, 60px, 400);
+            margin-bottom: 15px;
+            text-transform: capitalize;
+        }
+
+        p {
+            font-family: $nunito;
+            color: $boulder;
+            @include font-parametars (16px, 24px, 400);
+            margin-bottom: 30px;
+            max-width: 400px;
+            left: 50%;
+            transform: translateX(-50%);
+            position: relative;
+        }
+    }
+}
+
+.video-wrapper {
+    position: relative;
+
+    video {
+        width: 100%;
+        max-height: 570px;
+        border: 0;
+    }
+
+    .circle {
+        height: 85px;
+        width: 85px;
+        border-radius: 50%;
+        background: $java;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        border: 0;
+
+        .fa-play {
+            position: absolute;
+            cursor: pointer;
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            background: transparent;
+            outline: 0;
+            border: 0;
+        }
+
+        .fa-pause {
+            display: none;
+            position: absolute;
+            cursor: pointer;
+            color: #fff;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            background: transparent;
+            outline: 0;
+            border: 0;
+        }
+    }
+
+    @include bp(tablet) {
+        video {
+            height: auto;
+            padding: 0 30px;
+        }
+    }
+
+    @include bp(mobile) {
+        video {
+            height: auto;
+            padding: 0 30px;
+        }
+
+        .circle {
+            height: 65px;
+            width: 65px;
+        }
+    }
+}

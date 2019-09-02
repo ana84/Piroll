@@ -1,0 +1,62 @@
+.project-section {
+    background-color: $sand;
+    text-align: center;
+    padding: 100px 0;
+
+    h2 {
+        text-transform: capitalize;
+        color: $cod-gray;
+        @include font-parametars (30px, 84px, 400);
+    }
+
+    p {
+        color: $boulder;
+        font-family: $nunito;
+        @include font-parametars (16px, 24px, 400);
+        margin-bottom: 38px;
+    }
+
+    .project-form {
+        max-width: 671px;
+        margin: 0 auto;
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+
+            input,
+            textarea {
+                flex: 1;
+                padding: 20px;
+                margin-bottom: 30px;
+                border: 0;
+            }
+
+            textarea {
+                min-height: 171px;
+            }
+
+            input[type=email] {
+                margin-left: 30px;
+            }
+        }
+    }
+
+    @include bp(mobile) {
+        p {
+            padding: 0 20px;
+        }
+
+        .project-form .form-row {
+            input,
+            textarea {
+                flex: 1 1 100%;
+                margin: 0 20px 30px;
+            }
+
+            input[type=email] {
+                margin-left: 20px;
+            }
+        }
+    }
+}

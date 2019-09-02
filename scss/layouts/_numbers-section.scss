@@ -1,0 +1,45 @@
+.numbers-section {
+    background-color: $java;
+    width: 100%;
+    padding: 106px 0 88px;
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @include bp(mobile) {
+        padding: 50px 0 30px 30px;
+    }
+}
+
+.numberBox {
+    flex: 1;
+    color: $white;
+    position: relative;
+
+    span:first-of-type {
+        font-family: $icon;
+        @include font-parametars (48px, 30px, 400);
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    span:nth-child(2) {
+        position: absolute;
+        top: -12px;
+        @include font-parametars (18px, 30px, 400);
+    }
+
+    span:last-of-type {
+        position: relative;
+        top: -3px;
+        @include font-parametars (12px, 30px, 400);
+        text-transform: uppercase;
+    }
+
+    @include bp(mobile) {
+        flex: 1 1 50%;
+        margin-bottom: 20px;
+    }
+}

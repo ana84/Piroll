@@ -1,0 +1,126 @@
+.skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    > div {
+        width: 50%;
+    }
+
+    @include bp(tablet) {
+        flex-direction: column;
+
+        > div {
+            width: 100%;
+        }
+
+        .professional-img[style] {
+            width: 100% !important;
+        }
+    }
+
+    @include bp(mobile) {
+        flex-direction: column;
+
+        > div {
+            width: 100%;
+        }
+
+        .professional-img[style] {
+            width: 100% !important;
+        }
+    }
+}
+
+.professional-skills {
+    background: $caze;
+    padding: 135px 75px 0px 100px;
+
+    h2 {
+        color: $cod;
+        @include font-parametars (30px, 84px, 400);
+        text-transform: capitalize;
+    }
+
+    .skill-box {
+        margin-bottom: 31px;
+
+        span {
+            text-transform: uppercase;
+            @include font-parametars (12px, 30px, 400);
+            color: $black;
+            margin-bottom: 3px;
+            display: inline-block;
+
+            span {
+                margin-left: 30px;
+            }
+        }
+
+        .skill {
+            background: $alto;
+            height: 3px;
+
+            .skill_level {
+                background: $java;
+                height: 3px;
+
+                &.design {
+                    width: 75%;
+                    animation: design 2s;
+                    animation-duration: 10s;
+
+                    @-webkit-keyframes design {
+                        0% {
+                            width: 0;
+                        }
+
+                        100% {
+                            width: 75%;
+                        }
+                    }
+                }
+
+                &.web {
+                    width: 90%;
+                    animation: web 2s;
+                    animation-duration: 10s;
+
+                    @-webkit-keyframes web {
+                        0% {
+                            width: 0;
+                        }
+
+                        100% {
+                            width: 90%;
+                        }
+                    }
+                }
+
+                &.marketing {
+                    width: 65%;
+                    animation: marketing 2s;
+                    animation-duration: 10s;
+
+                    @-webkit-keyframes marketing {
+                        0% {
+                            width: 0;
+                        }
+
+                        100% {
+                            width: 65%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include bp(tablet) {
+        padding: 80px 75px 80px 100px;
+    }
+
+    @include bp(mobile) {
+        padding: 80px 75px 80px 100px;
+    }
+}

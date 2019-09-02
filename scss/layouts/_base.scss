@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    @include font-parametars (14px, 16px, 400);
+    font-family: $montserrat;
+}
+
+.wrapper {
+    max-width: $max-width;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}

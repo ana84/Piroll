@@ -1,0 +1,83 @@
+.burger-btn {
+    display: none;
+
+    @include bp(mobile) {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        display: block;
+        padding: 15px;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &:focus {
+            outline: 0;
+        }
+
+        span {
+            background: $black;
+            content: '';
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            z-index: 1;
+
+            &::after,
+            &::before {
+                background: $black;
+                content: '';
+                height: 2px;
+                left: 50%;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 20px;
+                z-index: 1;
+            }
+
+            &::before {
+                transition: 0.3s ease-in-out;
+                top: -5px;
+            }
+
+            &::after {
+                top: 7px;
+            }
+        }
+    }
+}
+
+.active-btn span {
+    left: 15%;
+    transform: rotate(45deg);
+
+    &:before {
+        left: 0;
+        transform: rotate(-90deg);
+        top: 0;
+    }
+
+    &:after {
+        opacity: 0;
+    }
+}
+
+.green-btn {
+    padding: 20px 43px 18px 47px;
+    background: $java;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        background: $boulder;
+        box-shadow: 3px 3px 5px $boulder;
+    }
+}

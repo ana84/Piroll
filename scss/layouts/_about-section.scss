@@ -1,0 +1,28 @@
+.about-section {
+    text-align: center;
+    padding: 129px 0 98px;
+    max-width: 618px;
+    margin: 0 auto;
+    
+    img {
+        display: inline-block;
+    }
+    
+    h2 {
+        color: $emperor;
+        @include font-parametars (30px,60px,400);
+        margin-bottom: 15px;
+        text-transform: capitalize;
+    }
+    
+    p {
+        font-family: $nunito;
+        color: $boulder;
+        @include font-parametars (16px,24px,400);
+        margin-bottom: 33px;
+    }
+    
+    @include bp(mobile) {
+        padding: 30px 20px;
+    }
+}

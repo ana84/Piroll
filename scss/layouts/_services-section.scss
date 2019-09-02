@@ -1,0 +1,43 @@
+.services-section {
+    background: $sand;
+    padding: 100px 0 35px;
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.services-item {
+    flex: 1 1 25%;
+    text-align: center;
+    padding-right: 30px;
+
+    span {
+        display: block;
+
+        &:first-of-type {
+            color: $dove;
+            font-family: $icon;
+            @include font-parametars (48px, 50px, 400);
+            margin-bottom: 25px;
+        }
+
+        &:nth-child(2) {
+            text-transform: uppercase;
+            @include font-parametars (12px, 30px, 400);
+            color: $emperor;
+        }
+
+        &:last-of-type {
+            font-family: $nunito;
+            @include font-parametars (16px, 24px, 400);
+            color: $boulder;
+            margin-bottom: 62px;
+        }
+    }
+
+    @include bp(mobile) {
+        flex: 1 1 50%;
+    }
+}

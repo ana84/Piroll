@@ -1,0 +1,83 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+
+    .logo,
+    .logo a img,
+    .nav ul,
+    .nav ul li {
+        display: inline-block;
+    }
+
+    @include bp(mobile) {
+        background: $alto;
+        padding: 25px;
+    }
+}
+
+.logo {
+    padding-top: 38px;
+
+    @include bp(mobile) {
+        padding-top: 0px;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.nav {
+    ul li {
+        padding-top: 37px;
+
+        a {
+            padding: 0 16px;
+            color: $emperor;
+            text-decoration: none;
+            font-family: $montserrat;
+            @include font-parametars (12px, 24px, 400);
+            text-transform: uppercase;
+            transition: .3s ease-in-out;
+
+            &.active,
+            &:hover {
+                color: $java;
+            }
+        }
+    }
+
+    @include bp(mobile) {
+        background: $alto;
+        left: 0;
+        right: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+        text-align: center;
+        top: 50px;
+
+
+        ul {
+            display: none;
+
+            li {
+                padding: 15px 10px;
+                width: 100%;
+
+                a {
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

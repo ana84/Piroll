@@ -1,0 +1,32 @@
+.banner-section {
+    background: url('../assets/images/banner.jpg') center;
+    background-size: cover;
+    min-height: 620px;
+    width: 100%;
+    position: relative;
+
+    .banner-box {
+        max-width: 480px;
+        position: absolute;
+        top: 179px;
+        right: 25px;
+
+        h1 {
+            color: $cod-gray;
+            font-family: $montserrat;
+            @include font-parametars (38px, 48px, 400);
+            margin-bottom: 22px;
+        }
+
+        p {
+            color: $boulder;
+            font-family: $nunito;
+            @include font-parametars (18px, 28px, 400);
+            margin-bottom: 34px;
+        }
+
+        @include bp(mobile) {
+            padding-left: 10px;
+        }
+    }
+}
